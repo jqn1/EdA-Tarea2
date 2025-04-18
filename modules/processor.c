@@ -5,7 +5,7 @@
 
 
 
-int csv_processor(char *filename, City **cities, int *index) {
+void csv_processor(char *filename, City **cities, int *index) {
     // esta funcion parsea el csv en un array de structs tipo City, y devuelve el tamaño de este
 
     char *column; //puntero para leer columnas
@@ -15,8 +15,8 @@ int csv_processor(char *filename, City **cities, int *index) {
     FILE *file;
     file = fopen(filename, "r");
     if (file == NULL) {
-      printf("Error archivo nulo");
-      return 0;
+      printf("Error, archivo nulo");
+      return ;
     }
     
     // Contar cantidad de filas para asignar memoria dinamicamente al array cities
@@ -25,13 +25,14 @@ int csv_processor(char *filename, City **cities, int *index) {
     while (fgets(buffer, sizeof(buffer), file)) {
         count++;
     }
+    // printf("count %d\n", count);
 
     // Asignar memoria para cities 
     *cities = malloc(count * sizeof(City));
     if (*cities == NULL) {
         printf("Error al asignar memoria\n");
         fclose(file);
-        return 0;
+        return ;
     }
 
     // Volver al inicio del archivo para leer los datos
@@ -48,24 +49,31 @@ int csv_processor(char *filename, City **cities, int *index) {
 
         // leer columna city_name
         column = strtok(buffer, ",");
+        // printf("index %d\n",*index);
         strcpy((*cities)[*index].city_name, column); 
+        // printf("%s\n", (*cities)[*index].city_name);
 
-        //leer columna seismic_level
+        //leer columna seismic_level y manejar caso null
         column = strtok(NULL, ",");
-        (*cities)[*index].seismic_level = atoi(column);
+        if (column != NULL){
+            // printf("columna seismic level %d\n",atoi(column));
+            (*cities)[*index].seismic_level = atoi(column);
+        }
 
-
-        //leer columna risk_percentk
+        // leer columna risk_percent y manejar caso null
         column = strtok(NULL, ",");
-        (*cities)[*index].risk_percent = atof(column);
+        if (column != NULL){
+            // printf("columna risk%f\n",atof(column));
+            (*cities)[*index].risk_percent = atof(column);
+        }
+        (*index)++; 
 
-        index++;
     }
 
     fclose(file);
 
 
-   return 1;
+   return ;
 
     
 }
