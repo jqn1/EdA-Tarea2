@@ -1,13 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "processor.h"
 
 
-typedef struct {
-    char city_name[15];
-    int seismic_level;
-    float risk_percent;
-}City;
 
 int csv_processor(char *filename, City **cities, int *index) {
     // esta funcion parsea el csv en un array de structs tipo City, y devuelve el tamaño de este
