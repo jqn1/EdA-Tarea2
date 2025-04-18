@@ -52,18 +52,19 @@ int csv_processor(char *filename, City **cities, int *index) {
 
         // leer columna city_name
         column = strtok(buffer, ",");
-        strcpy((*cities)[*index].city_name, column); 
+        strcpy((*cities)[index].city_name, column); 
 
         //leer columna seismic_level
         column = strtok(NULL, ",");
-        (*cities)[*index].seismic_level = atoi(column);
+        (*cities)[index].seismic_level = atoi(column);
 
 
         //leer columna risk_percentk
         column = strtok(NULL, ",");
-        (*cities)[*index].risk_percent = atof(column);
+        (*cities)[index].risk_percent = atof(column);
 
         index++;
+
     }
 
     fclose(file);
