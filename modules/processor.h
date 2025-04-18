@@ -7,6 +7,6 @@ typedef struct {
     float risk_percent;
 }City;
 
-int csv_processor(char *filename, City **cities, int *index);
+void csv_processor(char *filename, City **cities, int *index);
 
 #endif //
