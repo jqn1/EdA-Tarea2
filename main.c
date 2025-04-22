@@ -3,7 +3,6 @@
 #include "modules/processor.h"
 
 
-
 int main(int argc, char *argv []) {
     
 
@@ -15,6 +14,9 @@ int main(int argc, char *argv []) {
     
 
     
+    for(int i = 0; i<cities_size; i++) {
+        printf("City: %s, Siesmic_Level: %d, Risk_Percent: %.2f\n", cities[i].city_name, cities[i].seismic_level, cities[i].risk_percent);
+    }
 
 
 
