@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "modules/processor.h"
+#include "modules/sorter.h"
 
 
 int main(int argc, char *argv []) {
@@ -13,12 +14,16 @@ int main(int argc, char *argv []) {
 
     
 
-    
+     
     for(int i = 0; i<cities_size; i++) {
         printf("City: %s, Siesmic_Level: %d, Risk_Percent: %.2f\n", cities[i].city_name, cities[i].seismic_level, cities[i].risk_percent);
     }
 
-
+    //primer sort
+    quickSort(cities, 0, cities_size - 1, get_seismic_level);
+    for(int i = 0; i<cities_size; i++) {
+        printf("City: %s, Siesmic_Level: %d, Risk_Percent: %.2f\n", cities[i].city_name, cities[i].seismic_level, cities[i].risk_percent);
+    }
 
 
 
