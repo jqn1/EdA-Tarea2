@@ -4,7 +4,7 @@ UNAME_S := $(shell uname -s)
 # Variables base
 CC = gcc
 CFLAGS = -Wall -O2
-SRC = main.c modules/processor.c
+SRC = main.c modules/*.c
 OUT = app
 
 # Selección de compilador según sistema
