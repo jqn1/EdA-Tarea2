@@ -1,5 +1,5 @@
-#ifndef CSV_CONVERT  
-#define CSV_CONVERT   
+#ifndef PROCESSOR 
+#define PROCESSOR   
 
 typedef struct {
     char city_name[15];

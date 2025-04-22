@@ -12,7 +12,7 @@ int main(int argc, char *argv []) {
     csv_processor(argv[1], &cities, &cities_size);
 
 
-
+    
 
     
 
