@@ -6,6 +6,11 @@
 
 int main(int argc, char *argv []) {
     
+    if (argc != 4) {
+        printf("Uso: %s <input> <N> <output>\n", argv[ 0 ]);
+        return 1 ;
+    }
+    
 
     City *cities = NULL;
     int cities_size = 0;
