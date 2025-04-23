@@ -69,6 +69,12 @@ void csv_processor(char *filename, City **cities, int *index)
         {
             // printf("columna risk%f\n",atof(column));
             (*cities)[*index].risk_percent = atof(column);
+            (*cities)[*index].is_null = 0;
+        }else {
+
+            (*cities)[*index].risk_percent = 0;
+            (*cities)[*index].is_null = 1;
+
         }
         (*index)++;
     }

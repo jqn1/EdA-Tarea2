@@ -59,8 +59,11 @@ int main(int argc, char *argv[])
     quickSort(cities, l1_seismic_count + l2_seismic_count + l3_seismic_count + l4_seismic_count + l5_seismic_count, cities_size - 1, get_risk_percent);
     printf("\n Segundo Sort: \n");
     for(int i = 0; i < cities_size; i++) {
-        printf("City: %s, Siesmic_Level: %d, Risk_Percent: %.2f\n", cities[i].city_name, cities[i].seismic_level, cities[i].risk_percent);
+        printf("City: %s, Siesmic_Level: %d, Risk_Percent: %.2f, is_null: %d\n", cities[i].city_name, cities[i].seismic_level, cities[i].risk_percent, cities[i].is_null);
     }
+
+    //escribir archivo de salida
+    csv_output(cities, cities_size, output_name, cities_to_priorize);
     // liberar memoria al final del programa
     free(cities);
     return 0;
