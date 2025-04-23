@@ -64,7 +64,12 @@ void csv_processor(char *filename, City **cities, int *index) {
         column = strtok(NULL, ",");
         if (column != NULL){
             // printf("columna risk%f\n",atof(column));
-            (*cities)[*index].risk_percent = atof(column);
+            if (strlen(column) == 0){
+                printf("Warning: risk_percent is empty, setting to NaN\n");
+                (*cities)[*index].risk_percent = 0.0f/0.0f;
+            }else {
+                (*cities)[*index].risk_percent = atof(column);
+            }
         }
         (*index)++; 
 
