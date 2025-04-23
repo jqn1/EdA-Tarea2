@@ -15,7 +15,7 @@ void csv_processor(char *filename, City **cities, int *index) {
     FILE *file;
     file = fopen(filename, "r");
     if (file == NULL) {
-      printf("Error, archivo nulo");
+      printf("Error, archivo nulo\n");
       return ;
     }
     
@@ -76,4 +76,29 @@ void csv_processor(char *filename, City **cities, int *index) {
    return ;
 
     
+}
+
+void csv_output(City *cities, int size, char *filename, int cities_to_priorize) {
+    FILE *file = fopen(filename, "w");
+    if (file == NULL) {
+        printf("no se pudo escribir el archivo de salida");
+        return;
+    }
+
+    //encabezado
+    fprintf(file ,"city_name,seismic_level,risk_percent\n");
+
+    //escribir datos del array de struct
+    for (int i = 0; i < cities_to_priorize; i++) {
+        fprintf(file, "%s,%d,%.2f\n",
+                cities[i].city_name,
+                cities[i].seismic_level,
+                cities[i].risk_percent
+        );
+    }
+
+    fclose(file);
+    printf("CSV generado como %s con %d ciudades", filename, cities_to_priorize);
+    return;
+
 }

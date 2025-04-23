@@ -8,5 +8,6 @@ typedef struct {
 }City;
 
 void csv_processor(char *filename, City **cities, int *index);
+void csv_output(City *cities, int size, char *filename, int cities_to_priorize);
 
 #endif //
