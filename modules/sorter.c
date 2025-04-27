@@ -17,7 +17,7 @@ int quickSortPartition(City *cities, int start, int end, float (*get_attribute)(
     for (int j = start; j < end; j++) {
         float j_value = get_attribute(cities[j]);
 
-        if (j_value <= pivot_value) {
+        if (j_value >= pivot_value) {
             i++;
             //swap i and j
             City temp = cities[i];
