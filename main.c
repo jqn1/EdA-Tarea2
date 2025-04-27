@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     // for(int i = 0; i < cities_size; i++) {
     //     printf("City: %s, Siesmic_Level: %d, Risk_Percent: %.2f\n", cities[i].city_name, cities[i].seismic_level, cities[i].risk_percent);
     // }
-    
+
     // primer sort
     quickSort(cities, 0, cities_size - 1, get_seismic_level);
     printf("\n Primer Sort: \n");
@@ -42,27 +42,34 @@ int main(int argc, char *argv[])
     int l5_seismic_count = 0;
     for (int i = 0; i < cities_size; i++)
     {
-        l1_seismic_count = cities[i].seismic_level == 1 ? l1_seismic_count + 1 : l1_seismic_count;
-        l2_seismic_count = cities[i].seismic_level == 2 ? l2_seismic_count + 1 : l2_seismic_count;
-        l3_seismic_count = cities[i].seismic_level == 3 ? l3_seismic_count + 1 : l3_seismic_count;
-        l4_seismic_count = cities[i].seismic_level == 4 ? l4_seismic_count + 1 : l4_seismic_count;
-        l5_seismic_count = cities[i].seismic_level == 5 ? l5_seismic_count + 1 : l5_seismic_count;
+        if (cities[i].seismic_level == 1)
+            l1_seismic_count++;
+        else if (cities[i].seismic_level == 2)
+            l2_seismic_count++;
+        else if (cities[i].seismic_level == 3)
+            l3_seismic_count++;
+        else if (cities[i].seismic_level == 4)
+            l4_seismic_count++;
+        else if (cities[i].seismic_level == 5)
+            l5_seismic_count++;
     }
     printf("l1_count: %d, l2_count: %d, l3_count: %d, l4_count: %d, l5_count: %d \n", l1_seismic_count, l2_seismic_count, l3_seismic_count, l4_seismic_count, l5_seismic_count);
     printf("total: %d", l1_seismic_count + l2_seismic_count + l3_seismic_count + l4_seismic_count + l5_seismic_count);
     // se hace un quicksort por cada nivel sismico
-    quickSort(cities, 0, l1_seismic_count - 1, get_risk_percent);
-    quickSort(cities, l1_seismic_count, l1_seismic_count + l2_seismic_count - 1, get_risk_percent);
-    quickSort(cities, l1_seismic_count + l2_seismic_count, l1_seismic_count + l2_seismic_count + l3_seismic_count - 1, get_risk_percent);
-    quickSort(cities, l1_seismic_count + l2_seismic_count + l3_seismic_count, l1_seismic_count + l2_seismic_count + l3_seismic_count + l4_seismic_count - 1, get_risk_percent);
-    quickSort(cities, l1_seismic_count + l2_seismic_count + l3_seismic_count + l4_seismic_count, l1_seismic_count + l2_seismic_count + l3_seismic_count + l4_seismic_count + l5_seismic_count - 1, get_risk_percent);
-    quickSort(cities, l1_seismic_count + l2_seismic_count + l3_seismic_count + l4_seismic_count + l5_seismic_count, cities_size - 1, get_risk_percent);
+    quickSort(cities, 0, l5_seismic_count - 1, get_risk_percent);
+    quickSort(cities, l5_seismic_count, l5_seismic_count + l4_seismic_count - 1, get_risk_percent);
+    quickSort(cities, l5_seismic_count + l4_seismic_count, l5_seismic_count + l4_seismic_count + l3_seismic_count - 1, get_risk_percent);
+    quickSort(cities, l5_seismic_count + l4_seismic_count + l3_seismic_count, l5_seismic_count + l4_seismic_count + l3_seismic_count + l2_seismic_count - 1, get_risk_percent);
+    quickSort(cities, l5_seismic_count + l4_seismic_count + l3_seismic_count + l2_seismic_count, l5_seismic_count + l4_seismic_count + l3_seismic_count + l2_seismic_count + l1_seismic_count - 1, get_risk_percent);
     printf("\n Segundo Sort: \n");
-    for(int i = 0; i < cities_size; i++) {
-        printf("City: %s, Siesmic_Level: %d, Risk_Percent: %.2f, is_null: %d\n", cities[i].city_name, cities[i].seismic_level, cities[i].risk_percent, cities[i].is_null);
-    }
+    // for (int i = 0; i < cities_size; i++)
+    // {
+    //     printf("City: %s, Siesmic_Level: %d, Risk_Percent: %.2f, is_null: %d\n", cities[i].city_name, cities[i].seismic_level, cities[i].risk_percent, cities[i].is_null);
+    // }
 
-    //escribir archivo de salida
+    // Tercer sory por nombre de ciudades orden Z-A
+
+    // escribir archivo de salida
     csv_output(cities, cities_size, output_name, cities_to_priorize);
     // liberar memoria al final del programa
     free(cities);
