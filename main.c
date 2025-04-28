@@ -27,6 +27,35 @@ int main(int argc, char *argv[])
     //     printf("City: %s, Siesmic_Level: %d, Risk_Percent: %.2f\n", cities[i].city_name, cities[i].seismic_level, cities[i].risk_percent);
     // }
 
+    // Se agregan valores risk_percent a datos nulos para facilitar ordenamiento.
+    // seismic_level 5 y 4 => risk_percent = 101                        Quedan al top
+    // seismic_level 3 => risk_percent = average de seismic_level 3     Quedan al medio
+    // seismic_level 1 y 2 => risk_percent = -1                         Quedan al final
+    float average;
+    float acc = 0;
+    int l3_count = 0;
+    for (int i=0; i<cities_size; i++){
+        if (cities[i].is_null == 0 && cities[i].seismic_level == 3){
+            acc+=cities[i].risk_percent;
+            l3_count+=1;
+        }
+    }
+    average = acc/l3_count;
+    for (int i=0; i<cities_size; i++){
+        if (cities[i].is_null == 1){
+
+            if (cities[i].seismic_level == 4 || cities[i].seismic_level == 5){
+                cities[i].risk_percent = 101;
+            } else if (cities[i].seismic_level == 3)
+            {
+                cities[i].risk_percent = average;
+            } else {
+                cities[i].risk_percent = -1;
+            }
+        }
+        
+    }
+
     // primer sort
     quickSort(cities, 0, cities_size - 1, get_seismic_level);
     printf("\n Primer Sort: \n");

@@ -70,11 +70,12 @@ void csv_processor(char *filename, City **cities, int *index)
             // printf("columna risk%f\n",atof(column));
             (*cities)[*index].risk_percent = atof(column);
             (*cities)[*index].is_null = 0;
-        }else {
+        }
+        else
+        {
 
             (*cities)[*index].risk_percent = 0;
             (*cities)[*index].is_null = 1;
-
         }
         (*index)++;
     }
@@ -99,10 +100,18 @@ void csv_output(City *cities, int size, char *filename, int cities_to_priorize)
     // escribir datos del array de struct
     for (int i = 0; i < cities_to_priorize; i++)
     {
-        fprintf(file, "%s,%d,%.2f\n",
+        fprintf(file, "%s,%d,",
                 cities[i].city_name,
-                cities[i].seismic_level,
-                cities[i].risk_percent);
+                cities[i].seismic_level);
+        if (cities[i].is_null == 0)
+        {
+            fprintf(file, "%.2f\n",
+                    cities[i].risk_percent);
+        }
+        else
+        {
+            fprintf(file, " \n");
+        }
     }
 
     fclose(file);
