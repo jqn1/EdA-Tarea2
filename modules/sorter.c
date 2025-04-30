@@ -42,3 +42,13 @@ void quickSort(City *cities, int start, int end, float (*get_attribute)(City cit
         quickSort(cities, index + 1, end, get_attribute);
     }
 }
+
+
+int compare_reverse_cities(const void *a, const void *b) {
+    const City *city_a = (const City *)a;
+    const City *city_b = (const City *)b;
+    return strcasecmp(city_b->city_name, city_a->city_name); 
+}
+    
+    
+    
