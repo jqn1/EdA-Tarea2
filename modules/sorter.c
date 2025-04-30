@@ -1,4 +1,9 @@
+#include <strings.h> // for strcasecmp
+#include <string.h>
+#include <ctype.h>
 #include "processor.h"
+#include "sorter.h"
+
 
 float get_seismic_level(City city) {
     return city.seismic_level;
@@ -47,8 +52,15 @@ void quickSort(City *cities, int start, int end, float (*get_attribute)(City cit
 int compare_reverse_cities(const void *a, const void *b) {
     const City *city_a = (const City *)a;
     const City *city_b = (const City *)b;
-    return strcasecmp(city_b->city_name, city_a->city_name); 
+    
+    const char *name_a = city_a->city_name;
+    const char *name_b = city_b->city_name;
+    
+    while (*name_a && *name_b) {
+        int diff = tolower(*name_a) - tolower(*name_b);
+        if (diff != 0) return -diff; // Invierte el orden
+        name_a++;
+        name_b++;
+    }
+    return -(*name_a - *name_b);
 }
-    
-    
-    

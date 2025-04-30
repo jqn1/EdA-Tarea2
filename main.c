@@ -5,32 +5,6 @@
 #include "modules/processor.h"
 #include "modules/sorter.h"
 
-void to_lowercase(char *str) {
-    while (*str) {
-        *str = tolower((unsigned char)*str);
-        str++;
-    }
-}
-
-int compare_reverse_cities(const void *a, const void *b) {
-    const City *city_a = (const City *)a;
-    const City *city_b = (const City *)b;
-
-    // Crear copias locales para comparar
-    char copy_a[16];
-    char copy_b[16];
-
-    strncpy(copy_a, city_a->city_name, sizeof(copy_a));
-    strncpy(copy_b, city_b->city_name, sizeof(copy_b));
-    copy_a[sizeof(copy_a) - 1] = '\0';
-    copy_b[sizeof(copy_b) - 1] = '\0';
-
-    to_lowercase(copy_a);
-    to_lowercase(copy_b);
-
-    return strcmp(copy_b, copy_a); 
-}
-
 int main(int argc, char *argv[])
 {
 
