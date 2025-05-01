@@ -2,12 +2,10 @@
 #define SORTER
 
 #include "processor.h"
+void to_lowercase(char *str);
 
-float get_seismic_level(City city);
-
-float get_risk_percent(City city);
-
-int quickSortPartition(City *cities, int start, int end, float (*get_attribute)(City city));
-void quickSort(City *cities, int start, int end, float (*get_attribute)(City city));
+int quickSortPartition(City *cities, int low, int high, int (*compare)(const void *, const void *));
+void quickSort(City *cities, int low, int high, int (*compare)(const void *, const void *));
+int compare_cities(const void *a, const void *b);
 
 #endif  
