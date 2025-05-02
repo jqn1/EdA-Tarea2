@@ -4,15 +4,16 @@
 #include "processor.h"
 
 void to_lowercase(char *str) {
+    // funcion para pasar a lowercase un array de char, se usara para comparar nombres de ciudades sin importar mayuscula o minuscula
     while (*str) {
         *str = tolower((unsigned char)*str);
         str++;
     }
 }
 
-// Función de comparación para quickSort
-// Orden inverso (Z-A)
 int compare_cities(const void *a, const void *b) {
+    // esta funcion se usara en quicksort para aplicar los todos los criterios de orden dinamicamente
+    // excepto el caso de seismic_level 3 y risk_percent nulo
     const City *city_a = (const City *)a;
     const City *city_b = (const City *)b;
 
@@ -30,14 +31,6 @@ int compare_cities(const void *a, const void *b) {
             if (city_b->is_null && !city_a->is_null) {
                 return 1; // city_b tiene prioridad
             }
-        // } else if (city_a->seismic_level == 3) {
-        //     // Para seismic_level 3, colocar valores nulos en el medio
-        //     if (city_a->is_null && !city_b->is_null) {
-        //         return 1; // city_a al medio, menor prioridad
-        //     }
-        //     if (city_b->is_null && !city_a->is_null) {
-        //         return -1; // city_b al medio, menor prioridad
-        //     }
         } else if (city_a->seismic_level == 2 || city_a->seismic_level == 1) {
             if (city_a->is_null && !city_b->is_null) {
                 return 1; // city_a al final, menor prioridad
@@ -67,6 +60,7 @@ int compare_cities(const void *a, const void *b) {
 }
 
 int quickSortPartition(City *cities, int low, int high, int (*compare)(const void *, const void *)) {
+    // funcion para ordenar particiones con quicksort
     City pivot = cities[high];
     int i = low - 1;
 
@@ -97,6 +91,7 @@ void quickSort(City *cities, int low, int high, int (*compare)(const void *, con
 
 
 void seismic_level_3_null(City *cities, int size, int (*compare)(const void *, const void *)) {
+    //esta funcion inserta a la mitad de su categoria los datos que tienen seismic_level 3 y risk_percent null
     int start = -1;
     int end = -1;
     int not_null_count = 0;
@@ -125,12 +120,9 @@ void seismic_level_3_null(City *cities, int size, int (*compare)(const void *, c
         if (cities[i].seismic_level == 3 && cities[i].is_null == 1) {
             //printf("mediana: %f",median);
             null_count++;
-            cities[i].risk_percent = median;
+            cities[i].risk_percent = median - 0.00001;
         }
     }
-    // printf("nullcount %d\n",null_count);
-    // printf("start %d\n",start);
-    // printf("end %d\n",end);
     //ordenar la parte del array con sismic level 3
     quickSort(cities, start, end + null_count, compare);
 

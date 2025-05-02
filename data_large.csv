@@ -1,18 +1,18 @@
 city_name,seismic_level,risk_percent
-Coyhaique,5,92.60
+Coyhaique,1,920.60
 Curanilahue,1,10.53
 Puerto Montt,1,67.96
 Curicó,5,43.57
 La Serena,1,30.42
 Curicó,5,83.77
 Valdivia,2,44.73
-Iquique,5,
+,5,
 Arica,5,32.41
-Santiago,2,95.95
+Santiago,,95.95
 Rancagua,1,61.78
 Coyhaique,1,24.47
 Vallenar,4,92.85
-Punta Arenas,3,57.93
+Punta Arenas,3,
 Linares,4,56.61
 Penco,5,35.37
 Vallenar,3,71.12
@@ -34,8 +34,8 @@ Quillota,3,58.27
 Villa Alemana,5,70.40
 Talcahuano,5,
 Quilpué,5,79.29
-Curicó,1,82.86
-Rancagua,5,24.48
+Curicó,1000,8002.86
+Rancagua,5,
 Chillán,5,91.10
 Punta Arenas,4,45.69
 Vallenar,1,68.67

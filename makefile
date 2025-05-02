@@ -5,7 +5,7 @@ UNAME_S := $(shell uname -s)
 CC = gcc
 CFLAGS = -Wall -O2
 SRC = main.c modules/*.c
-OUT = app
+OUT = tarea2
 
 # Selección de compilador según sistema
 ifeq ($(UNAME_S),Darwin)

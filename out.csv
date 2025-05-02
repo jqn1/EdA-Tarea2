@@ -8,6 +8,7 @@ Santiago,5,
 San Fernando,5, 
 San Fernando,5, 
 Rancagua,5, 
+Rancagua,5, 
 Quillota,5, 
 Punta Arenas,5, 
 Penco,5, 
@@ -18,7 +19,6 @@ Los Ángeles,5,
 Los Ángeles,5, 
 La Serena,5, 
 La Serena,5, 
-Iquique,5, 
 Iquique,5, 
 Curicó,5, 
 Coyhaique,5, 
@@ -41,7 +41,6 @@ Angol,5,93.99
 Villa Alemana,5,93.65
 Antofagasta,5,93.33
 Curicó,5,92.84
-Coyhaique,5,92.60
 Linares,5,92.06
 Valparaíso,5,91.76
 Valparaíso,5,91.57
@@ -169,7 +168,6 @@ Quillota,5,26.95
 Quillota,5,26.80
 Peñaflor,5,25.25
 La Serena,5,24.90
-Rancagua,5,24.48
 Santiago,5,24.10
 Colina,5,23.72
 Arica,5,23.21
@@ -481,12 +479,13 @@ Valdivia,3,61.61
 Talca,3,61.09
 Colina,3,60.82
 Villa Alemana,3,60.41
-Talca,3,59.84
 Villa Alemana,3, 
 Valparaíso,3, 
 Valdivia,3, 
 Talcahuano,3, 
+Talca,3,59.84
 Quilpué,3, 
+Punta Arenas,3, 
 Punta Arenas,3, 
 Punta Arenas,3, 
 Punta Arenas,3, 
@@ -503,7 +502,6 @@ Concepción,3,
 Chillán,3, 
 Osorno,3,59.35
 Quillota,3,58.27
-Punta Arenas,3,57.93
 Temuco,3,57.63
 Penco,3,55.97
 Curicó,3,55.75
@@ -597,5 +595,407 @@ Valdivia,2,99.19
 Osorno,2,98.72
 Copiapó,2,97.95
 Santiago,2,97.66
-Santiago,2,95.95
 Lota,2,94.21
+Osorno,2,92.28
+Chillán,2,92.06
+Penco,2,91.70
+San Antonio,2,90.76
+Curanilahue,2,90.13
+Temuco,2,90.08
+Punta Arenas,2,89.86
+Antofagasta,2,89.85
+Vallenar,2,89.24
+La Serena,2,89.10
+Chillán,2,88.80
+Melipilla,2,88.32
+Curanilahue,2,87.72
+Curanilahue,2,86.30
+Melipilla,2,85.82
+Coronel,2,85.63
+Temuco,2,85.61
+Osorno,2,85.29
+Antofagasta,2,84.94
+Coronel,2,84.07
+Antofagasta,2,83.87
+Copiapó,2,83.37
+Vallenar,2,82.82
+San Antonio,2,82.34
+Arica,2,81.27
+Angol,2,80.88
+Concepción,2,80.86
+Antofagasta,2,79.32
+Valparaíso,2,78.33
+Penco,2,78.16
+Ovalle,2,77.39
+Los Ángeles,2,76.99
+Peñaflor,2,76.49
+Arica,2,75.69
+Calama,2,74.94
+La Serena,2,74.52
+Vallenar,2,74.05
+Talcahuano,2,73.40
+Coyhaique,2,73.10
+Arica,2,72.83
+Linares,2,71.85
+Lota,2,71.75
+Talcahuano,2,71.32
+Puerto Montt,2,70.14
+Valparaíso,2,69.96
+Lota,2,68.41
+Peñaflor,2,68.08
+Angol,2,67.81
+Los Ángeles,2,67.44
+Linares,2,66.92
+Ovalle,2,64.47
+San Fernando,2,63.75
+Lota,2,62.29
+Lota,2,61.86
+Chillán,2,60.95
+Quilpué,2,60.71
+Iquique,2,60.44
+Los Ángeles,2,59.46
+Quilpué,2,58.60
+Coyhaique,2,58.43
+Curicó,2,58.21
+Antofagasta,2,57.87
+Arica,2,56.43
+Coyhaique,2,55.60
+Quillota,2,55.24
+Punta Arenas,2,55.21
+Calama,2,54.97
+Ovalle,2,54.66
+Ovalle,2,54.54
+Chillán,2,54.50
+San Antonio,2,54.07
+San Antonio,2,53.33
+Temuco,2,52.43
+Quillota,2,52.18
+Vallenar,2,51.45
+Santiago,2,51.43
+Chillán,2,51.33
+Curicó,2,51.28
+Copiapó,2,50.99
+Iquique,2,50.45
+San Antonio,2,49.73
+Temuco,2,49.01
+Antofagasta,2,48.82
+Punta Arenas,2,48.18
+La Serena,2,48.17
+Valdivia,2,47.56
+Arica,2,47.10
+Villa Alemana,2,46.65
+Villa Alemana,2,46.24
+Rancagua,2,46.22
+Vallenar,2,45.90
+Copiapó,2,45.53
+Calama,2,45.40
+Arica,2,45.13
+Valdivia,2,44.73
+Colina,2,44.68
+Osorno,2,44.36
+Coronel,2,43.56
+Concepción,2,43.34
+Lota,2,43.31
+Linares,2,43.27
+Temuco,2,42.75
+Colina,2,42.65
+Coyhaique,2,41.03
+Quillota,2,40.27
+Los Ángeles,2,38.13
+Chillán,2,37.88
+Chillán,2,37.35
+Quillota,2,37.25
+Osorno,2,36.86
+Vallenar,2,36.69
+Angol,2,35.56
+Ovalle,2,35.33
+Ovalle,2,35.30
+Chillán,2,35.05
+Temuco,2,34.20
+San Fernando,2,33.93
+Iquique,2,33.42
+Santiago,2,31.89
+Arica,2,31.77
+Angol,2,31.15
+Curicó,2,31.02
+Peñaflor,2,30.72
+Valdivia,2,30.60
+Puerto Montt,2,29.80
+Talca,2,29.77
+Copiapó,2,29.73
+Rancagua,2,28.57
+Valdivia,2,27.99
+Temuco,2,27.64
+Ovalle,2,25.91
+Talcahuano,2,25.67
+Punta Arenas,2,25.55
+Colina,2,25.46
+Colina,2,25.08
+Vallenar,2,23.14
+Quillota,2,22.99
+Angol,2,21.74
+Valdivia,2,21.39
+Santiago,2,20.32
+Curanilahue,2,19.73
+Osorno,2,18.78
+Arica,2,18.76
+Punta Arenas,2,17.54
+Osorno,2,17.43
+Concepción,2,16.61
+Copiapó,2,16.55
+Linares,2,15.84
+Lota,2,14.75
+Calama,2,14.65
+Rancagua,2,13.56
+San Antonio,2,10.56
+Vallenar,2, 
+Vallenar,2, 
+Temuco,2, 
+Talcahuano,2, 
+Santiago,2, 
+Santiago,2, 
+Quillota,2, 
+Punta Arenas,2, 
+Puerto Montt,2, 
+Melipilla,2, 
+Melipilla,2, 
+Los Ángeles,2, 
+Curanilahue,2, 
+Coronel,2, 
+Concepción,2, 
+Concepción,2, 
+Colina,2, 
+Chillán,2, 
+Arica,2, 
+Arica,2, 
+Iquique,1,99.72
+Villa Alemana,1,99.47
+San Antonio,1,99.38
+Valparaíso,1,98.91
+Valparaíso,1,98.23
+Arica,1,97.72
+Colina,1,96.83
+Valdivia,1,96.51
+Angol,1,95.98
+Quilpué,1,95.92
+Peñaflor,1,95.83
+Coronel,1,95.26
+Angol,1,94.99
+Osorno,1,94.42
+Villa Alemana,1,93.20
+Linares,1,92.88
+Concepción,1,92.85
+Curanilahue,1,92.41
+Antofagasta,1,92.41
+Temuco,1,92.36
+Talca,1,92.19
+Calama,1,89.67
+Iquique,1,89.65
+Valparaíso,1,89.21
+Talcahuano,1,88.83
+Villa Alemana,1,88.73
+Santiago,1,88.38
+Angol,1,88.30
+Colina,1,87.92
+Quillota,1,87.10
+Temuco,1,86.90
+Peñaflor,1,85.86
+Colina,1,85.32
+Osorno,1,85.16
+Ovalle,1,85.13
+Curicó,1,84.61
+Colina,1,83.92
+Osorno,1,83.38
+Valdivia,1,83.10
+Talca,1,82.52
+Arica,1,82.34
+Coronel,1,82.05
+Colina,1,81.64
+Curicó,1,81.52
+Angol,1,80.42
+Angol,1,80.23
+Penco,1,80.13
+Punta Arenas,1,80.07
+Antofagasta,1,80.02
+Rancagua,1,79.15
+Coyhaique,1,78.84
+San Fernando,1,78.53
+Villa Alemana,1,77.44
+Villa Alemana,1,76.99
+Linares,1,76.89
+Quilpué,1,76.82
+San Fernando,1,76.54
+Villa Alemana,1,76.49
+Iquique,1,75.05
+La Serena,1,74.78
+Arica,1,73.93
+Colina,1,73.88
+Linares,1,73.63
+Punta Arenas,1,73.59
+Villa Alemana,1,73.37
+Calama,1,73.31
+Los Ángeles,1,73.23
+Concepción,1,73.18
+Concepción,1,73.13
+Curanilahue,1,72.43
+Linares,1,72.05
+San Fernando,1,71.87
+Valparaíso,1,71.84
+Melipilla,1,71.71
+Concepción,1,71.67
+Linares,1,71.03
+Concepción,1,70.99
+Curicó,1,70.89
+Linares,1,70.63
+San Fernando,1,70.52
+Angol,1,69.94
+Melipilla,1,69.83
+Penco,1,69.73
+Curicó,1,69.56
+Peñaflor,1,69.45
+Vallenar,1,68.67
+Iquique,1,68.40
+Colina,1,67.97
+Puerto Montt,1,67.96
+Punta Arenas,1,67.91
+Peñaflor,1,66.46
+Angol,1,65.81
+Penco,1,65.77
+Quilpué,1,65.75
+Coronel,1,64.90
+Lota,1,63.63
+Coronel,1,63.21
+Villa Alemana,1,62.46
+Temuco,1,61.90
+Rancagua,1,61.78
+Melipilla,1,61.26
+Temuco,1,60.83
+Temuco,1,60.58
+Valparaíso,1,59.12
+Iquique,1,58.56
+Chillán,1,58.30
+Quilpué,1,58.02
+Quilpué,1,56.35
+Ovalle,1,56.15
+Colina,1,55.42
+Quilpué,1,55.33
+Penco,1,55.30
+Angol,1,54.21
+Antofagasta,1,54.16
+Iquique,1,54.09
+Peñaflor,1,52.57
+La Serena,1,52.19
+San Antonio,1,51.84
+Ovalle,1,51.68
+San Antonio,1,50.73
+Linares,1,50.65
+Coronel,1,50.43
+Valdivia,1,49.99
+Colina,1,49.85
+Curanilahue,1,49.39
+Copiapó,1,49.38
+Santiago,1,49.31
+Rancagua,1,48.24
+Santiago,1,47.78
+Penco,1,47.74
+Talca,1,46.52
+Rancagua,1,46.00
+Talcahuano,1,44.70
+Temuco,1,43.88
+Quillota,1,43.43
+Angol,1,43.18
+Valdivia,1,42.95
+Vallenar,1,41.82
+Osorno,1,41.65
+Coronel,1,41.17
+San Fernando,1,40.81
+Concepción,1,40.15
+Arica,1,39.80
+Linares,1,39.69
+Valparaíso,1,39.68
+Talcahuano,1,38.95
+Chillán,1,38.87
+Valdivia,1,36.98
+La Serena,1,36.87
+San Fernando,1,36.57
+Coyhaique,1,35.73
+Coronel,1,35.59
+San Antonio,1,34.60
+Lota,1,33.98
+Penco,1,33.92
+Linares,1,32.18
+Linares,1,31.96
+San Fernando,1,31.19
+La Serena,1,30.42
+San Antonio,1,29.94
+Santiago,1,29.66
+Angol,1,29.57
+Coyhaique,1,29.46
+Chillán,1,28.84
+Ovalle,1,28.68
+Rancagua,1,27.29
+San Antonio,1,26.79
+Concepción,1,26.62
+Melipilla,1,26.40
+Temuco,1,25.96
+Coyhaique,1,24.47
+Los Ángeles,1,24.03
+Lota,1,23.95
+Chillán,1,23.06
+Puerto Montt,1,22.55
+Coronel,1,22.00
+Melipilla,1,21.53
+Quillota,1,21.47
+Angol,1,20.86
+Antofagasta,1,20.51
+San Antonio,1,20.42
+Copiapó,1,19.92
+Concepción,1,19.84
+Copiapó,1,19.72
+Arica,1,19.52
+Vallenar,1,19.16
+Los Ángeles,1,18.55
+Punta Arenas,1,18.52
+Lota,1,18.49
+Peñaflor,1,17.74
+Iquique,1,17.10
+Quilpué,1,16.85
+Ovalle,1,16.57
+Calama,1,15.79
+Colina,1,15.33
+Arica,1,14.29
+San Antonio,1,13.59
+Coyhaique,1,12.52
+Talcahuano,1,10.76
+La Serena,1,10.64
+Curanilahue,1,10.53
+Valdivia,1, 
+Talca,1, 
+Talca,1, 
+Rancagua,1, 
+Quilpué,1, 
+Quilpué,1, 
+Quilpué,1, 
+Quilpué,1, 
+Puerto Montt,1, 
+Peñaflor,1, 
+Peñaflor,1, 
+Melipilla,1, 
+Melipilla,1, 
+Lota,1, 
+Linares,1, 
+La Serena,1, 
+Iquique,1, 
+Coyhaique,1, 
+Copiapó,1, 
+Colina,1, 
+Colina,1, 
+Chillán,1, 
+Calama,1, 
+Arica,1, 
+Antofagasta,1, 
+Angol,1, 
+,0,0.00
+,0,0.00
+,0,0.00
+,0,0.00

@@ -5,7 +5,7 @@
 
 void csv_processor(char *filename, City **cities, int *index)
 {
-    // esta funcion parsea el csv en un array de structs tipo City, y devuelve el tamaño de este
+    // esta funcion parsea el csv en un array de structs City y calcula el tamaño de este 
 
     char *column;      // puntero para leer columnas
     char buffer[1024]; // almacenar linea
@@ -51,32 +51,52 @@ void csv_processor(char *filename, City **cities, int *index)
 
         // leer columna city_name
         column = strtok(buffer, ",");
-        // printf("index %d\n",*index);
-        strcpy((*cities)[*index].city_name, column);
-        // printf("%s\n", (*cities)[*index].city_name);
-
+        if (column == NULL) {
+            printf("Error: Nombre de ciudad faltante, registro ignorado\n");
+            continue;
+        }
+        
+        // guardar nombre de ciudad para mensajes de error
+        char city_name_temp[50];
+        strcpy(city_name_temp, column);
+        
         // leer columna seismic_level y manejar caso null
         column = strtok(NULL, ",");
-        if (column != NULL)
-        {
-            // printf("columna seismic level %d\n",atoi(column));
-            (*cities)[*index].seismic_level = atoi(column);
+        if (column == NULL) {
+            printf("Error, seismic_level faltante para la ciudad %s. registro ignorado.\n", city_name_temp);
+            continue;
         }
-
+        
+        int seismic_level = atoi(column);
+        if (seismic_level < 1 || seismic_level > 5) {
+            printf("Error, seismic level invalido para la ciudad %s. Debe estar entre 1 y 5. Registro ignorado.\n", city_name_temp);
+            continue;
+        }
+        
         // leer columna risk_percent y manejar caso null
         column = strtok(NULL, ",");
-        if (column != NULL)
-        {
-            // printf("columna risk%f\n",atof(column));
-            (*cities)[*index].risk_percent = atof(column);
-            (*cities)[*index].is_null = 0;
+        int is_null = 0;
+        float risk_percent = 0;
+        
+        if (column != NULL && strlen(column) > 0) {
+            char *endptr;
+            risk_percent = strtof(column, &endptr);
+            
+            if (risk_percent < 0 || risk_percent > 100) {
+                printf("Error, risk_percent invalido para la ciudad %s. registro ignorado.\n", city_name_temp);
+                continue;
+            }
+            
+            is_null = 0;
+        } else {
+            is_null = 1;
         }
-        else
-        {
-
-            (*cities)[*index].risk_percent = 0;
-            (*cities)[*index].is_null = 1;
-        }
+        
+        // escribir datos en el struct
+        strcpy((*cities)[*index].city_name, city_name_temp);
+        (*cities)[*index].seismic_level = seismic_level;
+        (*cities)[*index].risk_percent = risk_percent;
+        (*cities)[*index].is_null = is_null;
         (*index)++;
     }
 
@@ -87,6 +107,8 @@ void csv_processor(char *filename, City **cities, int *index)
 
 void csv_output(City *cities, int size, char *filename, int cities_to_priorize)
 {
+    // esta funcion escribe el archivo de salida considerando el tamaño que pidio el usuario
+
     FILE *file = fopen(filename, "w");
     if (file == NULL)
     {
